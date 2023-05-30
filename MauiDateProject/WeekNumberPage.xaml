@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:globe="clr-namespace:System.Globalization;assembly=netstandard"
+             xmlns:local="clr-namespace:MauiDateProject"
+             x:Class="MauiDateProject.WeekNumberPage"
+             Title="Week Number Page">
+    <VerticalStackLayout BindingContext="{Static globe:CultureInfo.CurrentCulture}">
+        <Label FontSize="Large" TextColor="Purple">
+            <Label.Text>
+                <Binding
+                     StringFormat="Week {0}">
+                    <Binding.Source>
+                        <local:WeekNumber />
+                    </Binding.Source>
+                </Binding>
+            </Label.Text>
+        </Label>
+    </VerticalStackLayout>
+</ContentPage>
