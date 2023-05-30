@@ -2,10 +2,11 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MauiDateProject"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
              xmlns:global="clr-namespace:System.Globalization;assembly=System.Runtime"
              x:Class="MauiDateProject.MainPage">
 
-    <VerticalStackLayout>
+    <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center" BindingContext="{x:Static sys:DateTime.Now}">
         
         <Label x:Name="FranceLabel">
             <Label.Text>
@@ -29,6 +30,6 @@
         </Label>
         <Button x:Name="FranceButton" Text="Speak" FontSize="Large" TextColor="blue" Clicked="Button_Clicked" />
         <Button x:Name="GermanyButton" Text="Speak" FontSize="Large" TextColor="blue" Clicked="Button_Clicked" />
-    </VerticalStackLayout>
+    </HorizontalStackLayout>
 
 </ContentPage>
