@@ -4,32 +4,170 @@
              xmlns:local="clr-namespace:MauiDateProject"
              xmlns:sys="clr-namespace:System;assembly=netstandard"
              xmlns:global="clr-namespace:System.Globalization;assembly=System.Runtime"
-             x:Class="MauiDateProject.MainPage">
+             x:Class="MauiDateProject.MainPage"
+             Title="France and Germany speak weekdays">
 
-    <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center" BindingContext="{x:Static sys:DateTime.Now}">
-        
-        <Label x:Name="FranceLabel">
-            <Label.Text>
-                <Binding Path="DateTimeFormat.DayNames[3]"
-                     StringFormat="The middle day of the week in France is {0}">
-                    <Binding.Source>
-                        <local:CultureExtension CultureName="fr-FR" />
-                    </Binding.Source>
-                </Binding>
-            </Label.Text>
-        </Label>
-        <Label x:Name="GermanyLabel">
-            <Label.Text>
-                <Binding Path="DateTimeFormat.DayNames[3]"
-                     StringFormat="The middle day of the week in Germany is {0}">
-                    <Binding.Source>
-                        <local:CultureExtension CultureName="de-DE" />
-                    </Binding.Source>
-                </Binding>
-            </Label.Text>
-        </Label>
-        <Button x:Name="FranceButton" Text="Speak" FontSize="Large" TextColor="blue" Clicked="Button_Clicked" />
-        <Button x:Name="GermanyButton" Text="Speak" FontSize="Large" TextColor="blue" Clicked="Button_Clicked" />
-    </HorizontalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" BindingContext="{x:Static sys:DateTime.Now}">
+
+            <Label x:Name="FranceLabelSunday" TextColor="Blue">
+                <Label.Text>
+                    <Binding Path="DateTimeFormat.DayNames[0]"
+                     StringFormat="Sunday in France is {0}">
+                        <Binding.Source>
+                            <local:CultureExtension CultureName="fr-FR" />
+                        </Binding.Source>
+                    </Binding>
+                </Label.Text>
+            </Label>
+            <Label x:Name="FranceLabelMonday" TextColor="Lime">
+                <Label.Text>
+                    <Binding Path="DateTimeFormat.DayNames[1]"
+                     StringFormat="Monday in France is {0}">
+                        <Binding.Source>
+                            <local:CultureExtension CultureName="fr-FR" />
+                        </Binding.Source>
+                    </Binding>
+                </Label.Text>
+            </Label>
+            <Label x:Name="FranceLabelTuesday" TextColor="Blue">
+                <Label.Text>
+                    <Binding Path="DateTimeFormat.DayNames[2]"
+                     StringFormat="Tuesday in France is {0}">
+                        <Binding.Source>
+                            <local:CultureExtension CultureName="fr-FR" />
+                        </Binding.Source>
+                    </Binding>
+                </Label.Text>
+            </Label>
+            <Label x:Name="FranceLabelWednesday" TextColor="Lime">
+                <Label.Text>
+                    <Binding Path="DateTimeFormat.DayNames[3]"
+                     StringFormat="Wednesday in France is {0}">
+                        <Binding.Source>
+                            <local:CultureExtension CultureName="fr-FR" />
+                        </Binding.Source>
+                    </Binding>
+                </Label.Text>
+            </Label>
+            <Label x:Name="FranceLabelThursday" TextColor="Blue">
+                <Label.Text>
+                    <Binding Path="DateTimeFormat.DayNames[4]"
+                     StringFormat="Thursday in France is {0}">
+                        <Binding.Source>
+                            <local:CultureExtension CultureName="fr-FR" />
+                        </Binding.Source>
+                    </Binding>
+                </Label.Text>
+            </Label>
+            <Label x:Name="FranceLabelFriday" TextColor="Lime">
+                <Label.Text>
+                    <Binding Path="DateTimeFormat.DayNames[4]"
+                     StringFormat="Friday in France is {0}">
+                        <Binding.Source>
+                            <local:CultureExtension CultureName="fr-FR" />
+                        </Binding.Source>
+                    </Binding>
+                </Label.Text>
+            </Label>
+            <Label x:Name="FranceLabelSaturday" TextColor="Blue">
+                <Label.Text>
+                    <Binding Path="DateTimeFormat.DayNames[5]"
+                     StringFormat="Saturday in France is {0}">
+                        <Binding.Source>
+                            <local:CultureExtension CultureName="fr-FR" />
+                        </Binding.Source>
+                    </Binding>
+                </Label.Text>
+            </Label>
+            <BoxView WidthRequest="1600" HeightRequest="10" BackgroundColor="Orange" />
+            <Label x:Name="GermanyLabelSunday" TextColor="Lime">
+                <Label.Text>
+                    <Binding Path="DateTimeFormat.DayNames[0]"
+                     StringFormat="Sunday in Germany is {0}">
+                        <Binding.Source>
+                            <local:CultureExtension CultureName="de-DE" />
+                        </Binding.Source>
+                    </Binding>
+                </Label.Text>
+            </Label>
+            <Label x:Name="GermanyLabelMonday" TextColor="Blue">
+                <Label.Text>
+                    <Binding Path="DateTimeFormat.DayNames[1]"
+                     StringFormat="Monday in Germany is {0}">
+                        <Binding.Source>
+                            <local:CultureExtension CultureName="de-DE" />
+                        </Binding.Source>
+                    </Binding>
+                </Label.Text>
+            </Label>
+            <Label x:Name="GermanyLabelTuesday" TextColor="Lime">
+                <Label.Text>
+                    <Binding Path="DateTimeFormat.DayNames[2]"
+                     StringFormat="Tuesday in Germany is {0}">
+                        <Binding.Source>
+                            <local:CultureExtension CultureName="de-DE" />
+                        </Binding.Source>
+                    </Binding>
+                </Label.Text>
+            </Label>
+            <Label x:Name="GermanyLabelWednesday" TextColor="Blue">
+                <Label.Text>
+                    <Binding Path="DateTimeFormat.DayNames[3]"
+                     StringFormat="Wednesday in Germany is {0}">
+                        <Binding.Source>
+                            <local:CultureExtension CultureName="de-DE" />
+                        </Binding.Source>
+                    </Binding>
+                </Label.Text>
+            </Label>
+            <Label x:Name="GermanyLabelThursday" TextColor="Lime">
+                <Label.Text>
+                    <Binding Path="DateTimeFormat.DayNames[4]"
+                     StringFormat="Thursday in Germany is {0}">
+                        <Binding.Source>
+                            <local:CultureExtension CultureName="de-DE" />
+                        </Binding.Source>
+                    </Binding>
+                </Label.Text>
+            </Label>
+            <Label x:Name="GermanyLabelFriday" TextColor="Blue">
+                <Label.Text>
+                    <Binding Path="DateTimeFormat.DayNames[4]"
+                     StringFormat="Friday in Germany is {0}">
+                        <Binding.Source>
+                            <local:CultureExtension CultureName="de-DE" />
+                        </Binding.Source>
+                    </Binding>
+                </Label.Text>
+            </Label>
+            <Label x:Name="GermanyLabelSaturday" TextColor="Lime">
+                <Label.Text>
+                    <Binding Path="DateTimeFormat.DayNames[5]"
+                     StringFormat="Saturday in Germany is {0}">
+                        <Binding.Source>
+                            <local:CultureExtension CultureName="de-DE" />
+                        </Binding.Source>
+                    </Binding>
+                </Label.Text>
+            </Label>
+            <Button x:Name="SundayFranceButton" Margin="10" WidthRequest="400" Text="Speak Sunday France" FontSize="Medium" TextColor="blue" Clicked="Button_Clicked" />
+            <Button x:Name="MondayFranceButton" Margin="10" WidthRequest="400" Text="Speak Monday France" FontSize="Medium" TextColor="Lime" Clicked="Button_Clicked" />
+            <Button x:Name="TuesdayFranceButton" Margin="10" WidthRequest="400" Text="Speak Tuesday France" FontSize="Medium" TextColor="blue" Clicked="Button_Clicked" />
+            <Button x:Name="WednesdayFranceButton" Margin="10" WidthRequest="400" Text="Speak Wednesday France" FontSize="Medium" TextColor="Lime" Clicked="Button_Clicked" />
+            <Button x:Name="ThursdayFranceButton" Margin="10" WidthRequest="400" Text="Speak Thursday France" FontSize="Medium" TextColor="blue" Clicked="Button_Clicked" />
+            <Button x:Name="FridayFranceButton" Margin="10" WidthRequest="400" Text="Speak Friday France" FontSize="Medium" TextColor="Lime" Clicked="Button_Clicked" />
+            <Button x:Name="SaturdayFranceButton" Margin="10" WidthRequest="400" Text="Speak Saturday France" FontSize="Medium" TextColor="blue" Clicked="Button_Clicked" />
+
+            <Button x:Name="SundayGermanyButton" Margin="10" WidthRequest="400" Text="Speak Sunday Germany" FontSize="Medium" TextColor="blue" Clicked="Button_Clicked" />
+            <Button x:Name="MondayGermanyButton" Margin="10" WidthRequest="400" Text="Speak Monday Germany" FontSize="Medium" TextColor="Lime" Clicked="Button_Clicked" />
+            <Button x:Name="TuesdayGermanyButton" Margin="10" WidthRequest="400" Text="Speak Tuesday Germany" FontSize="Medium" TextColor="blue" Clicked="Button_Clicked" />
+            <Button x:Name="WednesdayGermanyButton" Margin="10" WidthRequest="400" Text="Speak Wednesday Germany" FontSize="Medium" TextColor="Lime" Clicked="Button_Clicked" />
+            <Button x:Name="ThursdayGermanyButton" Margin="10" WidthRequest="400" Text="Speak Thursday Germany" FontSize="Medium" TextColor="blue" Clicked="Button_Clicked" />
+            <Button x:Name="FridayGermanyButton" Margin="10" WidthRequest="400" Text="Speak Friday Germany" FontSize="Medium" TextColor="Lime" Clicked="Button_Clicked" />
+            <Button x:Name="SaturdayGermanyButton" Margin="10" WidthRequest="400" Text="Speak Saturday Germany" FontSize="Medium" TextColor="blue" Clicked="Button_Clicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
 
 </ContentPage>

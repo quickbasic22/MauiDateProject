@@ -5,19 +5,79 @@
              xmlns:local="clr-namespace:MauiDateProject"
              x:Class="MauiDateProject.WeekNumberPage"
              Title="Week Number Page">
-    <VerticalStackLayout BindingContext="{Static globe:DateTime.Now}">
-        <Label Text="{Binding DayOfWeek, StringFormat='Day Of Week {0}'}" FontSize="Large" TextColor="Lime" />
-        <Label Text="{Binding DayOfYear, StringFormat='Day {0} of 2023'}" FontSize="Large" TextColor="Purple" />
-        <Label Text="{Binding DayOfYear, Converter={local:IntConverter}, StringFormat='{0} days left of 2023'}" FontSize="Large" TextColor="Lime" />
-        <Label FontSize="Large" TextColor="Purple">
-            <Label.Text>
-                <Binding
-                     StringFormat="Week {0} in 2023">
-                    <Binding.Source>
-                        <local:WeekNumber />
-                    </Binding.Source>
-                </Binding>
-            </Label.Text>
-        </Label>
-    </VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" BindingContext="{Static globe:DateTime.Now}">
+            <Label Text="{Binding DayOfWeek, StringFormat='Day Of Week {0}'}" FontSize="Medium" TextColor="Lime" />
+            <Label Text="{Binding DayOfYear, StringFormat='Day {0} of 2023'}" FontSize="Medium" TextColor="Purple" />
+            <Label Text="{Binding DayOfYear, Converter={local:IntConverter}, StringFormat='{0} days left of 2023'}" FontSize="Medium" TextColor="Lime" />
+            <BoxView HeightRequest="10" BackgroundColor="Purple" />
+            <Label FontSize="Medium" TextColor="Purple">
+                <Label.Text>
+                    <Binding
+                     StringFormat="Week {0} with CalendarWeekRule.FirstDay DayOfWeek.Sunday in 2023">
+                        <Binding.Source>
+                            <local:WeekNumber CalendarWeekRule="FirstDay" DayOfWeek="Sunday" />
+                        </Binding.Source>
+                    </Binding>
+                </Label.Text>
+            </Label>
+            <BoxView HeightRequest="10" BackgroundColor="Purple" />
+            <Label FontSize="Medium" TextColor="LimeGreen">
+                <Label.Text>
+                    <Binding
+                     StringFormat="Week {0} with CalendarWeekRule.FirstFourDayWeek DayOfWeek.Sunday in 2023">
+                        <Binding.Source>
+                            <local:WeekNumber CalendarWeekRule="FirstFourDayWeek" DayOfWeek="Sunday" />
+                        </Binding.Source>
+                    </Binding>
+                </Label.Text>
+            </Label>
+            <BoxView HeightRequest="10" BackgroundColor="Purple" />
+            <Label FontSize="Medium" TextColor="Purple">
+                <Label.Text>
+                    <Binding
+                     StringFormat="Week {0} with CalendarWeekRule.FirstFullWeek DayOfWeek.Sunday in 2023">
+                        <Binding.Source>
+                            <local:WeekNumber CalendarWeekRule="FirstFullWeek" DayOfWeek="Sunday" />
+                        </Binding.Source>
+                    </Binding>
+                </Label.Text>
+            </Label>
+            <BoxView HeightRequest="10" BackgroundColor="Purple" />
+            <Label FontSize="Medium" TextColor="Purple">
+                <Label.Text>
+                    <Binding
+                     StringFormat="Week {0} with CalendarWeekRule.FirstDay DayOfWeek.Monday in 2023">
+                        <Binding.Source>
+                            <local:WeekNumber CalendarWeekRule="FirstDay" DayOfWeek="Monday" />
+                        </Binding.Source>
+                    </Binding>
+                </Label.Text>
+            </Label>
+            <BoxView HeightRequest="10" BackgroundColor="Purple" />
+            <Label FontSize="Medium" TextColor="LimeGreen">
+                <Label.Text>
+                    <Binding
+                     StringFormat="Week {0} with CalendarWeekRule.FirstFourDayWeek DayOfWeek.Monday in 2023">
+                        <Binding.Source>
+                            <local:WeekNumber CalendarWeekRule="FirstFourDayWeek" DayOfWeek="Monday" />
+                        </Binding.Source>
+                    </Binding>
+                </Label.Text>
+            </Label>
+            <BoxView HeightRequest="10" BackgroundColor="Purple" />
+            <Label FontSize="Medium" TextColor="Purple">
+                <Label.Text>
+                    <Binding
+                     StringFormat="Week {0} with CalendarWeekRule.FirstFullWeek DayOfWeek.Monday in 2023">
+                        <Binding.Source>
+                            <local:WeekNumber CalendarWeekRule="FirstFullWeek" DayOfWeek="Monday" />
+                        </Binding.Source>
+                    </Binding>
+                </Label.Text>
+            </Label>
+            <BoxView HeightRequest="10" BackgroundColor="Purple" />
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

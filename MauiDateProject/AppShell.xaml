@@ -8,11 +8,11 @@
     Title="Shell Content Page">
 
     <ShellContent
-        Title="WeekNumberPage"
+        Title="Week Number Page"
         ContentTemplate="{DataTemplate local:WeekNumberPage}"
         Route="WeekNumberPage" />
     <ShellContent
-        Title="Home"
+        Title="Speak day of week in France and Germany"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
